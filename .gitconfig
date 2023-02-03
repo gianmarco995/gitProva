@@ -1,0 +1,5 @@
+[user]
+	email = gianmarco.m95@gmail.com
+	name = gianmarco
+[credential]
+	credentialStore = gpg

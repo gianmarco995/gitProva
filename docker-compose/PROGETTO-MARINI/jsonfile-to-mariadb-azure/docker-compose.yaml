@@ -1,0 +1,28 @@
+version: "2.4"
+
+services:
+  jsonfile-to-mariadb-azure:
+    build:
+      context: .
+    image: jsonfile-to-mariadb-azure:0.0.1
+    container_name: jsonfile-to-mariadb-azure
+    hostname: jsonfile-to-mariadb-azure
+    environment:
+    - TZ=Europe/Rome
+    volumes:
+      - ./cfg-data/:/cfg-data/
+      - edge-fileserver-storage:/usr/src/app/ftpserver # where the fileserver volume that contains all configuration file is mounted
+    restart: unless-stopped
+    mem_limit: 250mb  # mandatory field for IE
+    networks:
+      - proxy-redirect  # default IE network
+
+volumes:
+  edge-fileserver-storage:
+    name: edge-fileserver-storage
+    external: true
+
+networks:
+  proxy-redirect:
+    external: true
+    name: proxy-redirect

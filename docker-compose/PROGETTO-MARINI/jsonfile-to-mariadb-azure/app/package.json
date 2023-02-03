@@ -1,0 +1,25 @@
+{
+  "name": "jsonfile-to-mariadb-azure",
+  "version": "0.0.1",
+  "description": " NodeJS App that read a file from fileserver volume app and send to MariaDB and Azure.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mariadb",
+    "node",
+    "json",
+    "ftp",
+    "azure",
+    "iot"
+  ],
+  "dependencies": {
+    "mariadb": "^3.0.2",
+    "azure-iot-device": "^1.18.1",
+    "azure-iot-device-amqp": "^1.14.1",
+    "azure-iot-device-http": "^1.14.1",
+    "azure-iot-device-mqtt": "^1.16.1"
+  }
+}
