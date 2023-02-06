@@ -1,0 +1,12 @@
+{
+    "mariaDBHost": "edge-mariadb",
+    "mariaDBUser": "edge",
+    "mariaDBPassword": "edge",
+    "insertTableName": "myTable",
+    "insertColumns": [
+        "column_1",
+        "column_2",
+        "column_3",
+        "column_4"
+    ]
+}

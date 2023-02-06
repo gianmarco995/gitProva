@@ -1,0 +1,9 @@
+- name: modifico l'indirizzo ip
+  shell:
+   cmd: sed -i 's/remote.*1194/remote {{ ip }} {{ port }}/g' /etc/openvpn/easy-rsa/keys/{{user1}}.ovpn
+
+- name: copy to local
+  fetch: 
+    src: "/etc/openvpn/easy-rsa/keys/{{user1}}.ovpn"
+    dest: /tmp/server1
+    flat: yes

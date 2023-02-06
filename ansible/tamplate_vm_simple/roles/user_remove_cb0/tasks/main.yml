@@ -1,0 +1,5 @@
+- name: Remove the user 'cb0' if present in the linux system
+  ansible.builtin.user:
+   name: "cb0"
+   state: absent
+   remove: yes

@@ -1,0 +1,19 @@
+  - name: abilito password auth nel file di config di ssh
+    ansible.builtin.lineinfile:
+     path: /etc/ssh/sshd_config
+     firstmatch: yes
+     search_string: "PasswordAuthentication no"
+     state: present
+     line: "PasswordAuthentication yes"
+  - name: restart service
+    ansible.builtin.service:
+     name: sshd
+     state: restarted
+
+
+
+
+
+
+
+

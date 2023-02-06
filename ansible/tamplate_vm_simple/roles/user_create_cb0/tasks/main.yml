@@ -1,0 +1,8 @@
+  - name: creare utente cb0 sulla VM
+    ansible.builtin.user:
+     name: "cb0"
+     state: present
+     password: "{{ mypassword | password_hash('sha512') }}"
+     shell: /bin/bash
+     group: sudo
+     comment: ExT_User

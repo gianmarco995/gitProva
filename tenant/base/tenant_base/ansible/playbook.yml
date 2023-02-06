@@ -1,0 +1,6 @@
+---
+- name: "creare ed estrarre file client dal server VPN"
+  hosts: server
+  roles:
+  - create_client
+  - export_config
